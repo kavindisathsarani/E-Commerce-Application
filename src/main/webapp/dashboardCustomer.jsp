@@ -175,14 +175,20 @@
                         <i class="bi bi-cart me-1"></i>Cart
                     </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="login.jsp">
-                        <i class="bi bi-person me-1"></i>Login
+                    <a class="nav-link" href="dashboardCustomer.jsp">
+                        <i class="bi bi-speedometer2 me-1"></i>Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="customerdashboard.jsp">
-                        <i class="bi bi-speedometer2 me-1"></i>Dashboard
+                    <a class="nav-link" href="profile.jsp">
+                        <i class="bi bi-person me-1"></i>profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.jsp">
+                        <i class="bi bi-person me-1"></i>Logout
                     </a>
                 </li>
             </ul>
