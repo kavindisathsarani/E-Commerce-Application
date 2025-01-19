@@ -24,8 +24,6 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password").trim();  // Trim input to avoid leading/trailing spaces
         String role = req.getParameter("role").trim();  // Trim role to avoid leading/trailing spaces
 
-
-
         String sql = "SELECT * FROM user WHERE userName = ? AND password = ? AND role = ?";
 
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
@@ -44,13 +42,21 @@ public class LoginServlet extends HttpServlet {
                 String retrievedPassword = rs.getString("password");
                 String retrievedRole = rs.getString("role");
 
-
                 // Store user data in session (or perform other actions)
                 req.getSession().setAttribute("userName", retrievedUserName);
                 req.getSession().setAttribute("role", retrievedRole);
 
-                // Redirect to dashboard.jsp after successful login
-                resp.sendRedirect("dashboardCustomer.jsp");
+                // Check the role and redirect accordingly
+                if ("customer".equals(retrievedRole)) {
+                    // Redirect to customer dashboard
+                    resp.sendRedirect("dashboardAdmin.jsp");
+                } else if ("administrator".equals(retrievedRole)) {
+                    // Redirect to administrator dashboard
+                    resp.sendRedirect("dashboardAdmin.jsp");
+                } else {
+                    // If role doesn't match, redirect to login page with error
+                    resp.sendRedirect("index.jsp?error=true");
+                }
             } else {
                 // If no record is found, redirect to login page with error
                 resp.sendRedirect("index.jsp?error=true");
