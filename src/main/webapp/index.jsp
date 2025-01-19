@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-<a href="signUp.jsp">Sign Up</a>
+
 <div class="container vh-100 d-flex justify-content-center align-items-center">
     <div class="card shadow-lg" style="max-width: 400px; width: 100%;">
         <div class="card-body">
@@ -31,7 +31,7 @@
                 <div class="mb-3">
                     <label class="form-label">Role</label>
                     <select class="form-select" name="role" required>
-                        <option value="user" selected>Customer</option>
+                        <option value="customer" selected>Customer</option>
                         <option value="administrator">Administrator</option>
                     </select>
                 </div>
