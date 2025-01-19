@@ -12,4 +12,9 @@
     >
 
     </Resource>
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>default</servlet-name>-->
+<!--        <url-pattern>/</url-pattern>-->
+<!--        <url-pattern>/img/*</url-pattern>-->
+<!--    </servlet-mapping>-->
 </Context>

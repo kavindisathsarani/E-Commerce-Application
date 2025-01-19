@@ -13,30 +13,30 @@
 <body>
 <h1>Save Customer</h1>
 
-<%
-String message=request.getParameter("message");
-String error=request.getParameter("error");
-%>
+<%--<%--%>
+<%--String message=request.getParameter("message");--%>
+<%--String error=request.getParameter("error");--%>
+<%--%>--%>
 
-<%
-    if (message!= null){
-%>
-<div style="color: green"><%=message%>
-</div>
+<%--<%--%>
+<%--    if (message!= null){--%>
+<%--%>--%>
+<%--<div style="color: green"><%=message%>--%>
+<%--</div>--%>
 
-<%
-    }
-%>
+<%--<%--%>
+<%--    }--%>
+<%--%>--%>
 
-<%
-    if (error!= null){
-%>
-<div style="color: red"><%=error%>
-</div>
+<%--<%--%>
+<%--    if (error!= null){--%>
+<%--%>--%>
+<%--<div style="color: red"><%=error%>--%>
+<%--</div>--%>
 
-<%
-    }
-%>
+<%--<%--%>
+<%--    }--%>
+<%--%>--%>
 
 
 <form action="customer-save" method="post">
