@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
                 // Check the role and redirect accordingly
                 if ("customer".equals(retrievedRole)) {
                     // Redirect to customer dashboard
-                    resp.sendRedirect("dashboardAdmin.jsp");
+                    resp.sendRedirect("dashboardCustomer.jsp");
                 } else if ("administrator".equals(retrievedRole)) {
                     // Redirect to administrator dashboard
                     resp.sendRedirect("dashboardAdmin.jsp");
