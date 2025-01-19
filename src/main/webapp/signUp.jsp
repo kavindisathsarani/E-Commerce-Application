@@ -26,7 +26,12 @@
 
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+            background-image: url('images/pexels-naimbic-2610756.jpg'); /* Replace with your image path */
+            background-size: cover; /* Ensures the image covers the entire body */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the image */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,14 +39,14 @@
         }
 
         .login-container {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 1rem;
-            padding: 2.5rem;
-            width: 100%;
-            max-width: 450px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-            0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+            border-radius: 1rem; /* Rounded corners */
+            padding: 2.5rem; /* Inner padding */
+            width: 100%; /* Full width */
+            max-width: 450px; /* Limit max width */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Subtle shadow */
+            backdrop-filter: blur(15px); /* Blurs the background behind the container */
+            border: 1px solid rgba(255, 255, 255, 0.25); /* Subtle border for depth */
         }
 
         .login-header {

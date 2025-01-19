@@ -7,6 +7,44 @@
     <title>Login Page</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('images/login-new.png'); /* Replace with your image path */
+            background-size: cover; /* Ensures the image covers the entire body */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the image */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+            backdrop-filter: blur(10px); /* Blur effect */
+            border-radius: 15px; /* Smooth rounded corners */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Button primary color */
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            border-color: #0056b3;
+        }
+
+        .btn-outline-primary {
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+    </style>
 </head>
 <body class="bg-light">
 

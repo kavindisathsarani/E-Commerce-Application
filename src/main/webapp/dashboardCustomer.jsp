@@ -57,8 +57,8 @@
         /* Hero section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                /*url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');*/
-            url('images/Screenshot 2025-01-16 201842.png');
+                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+
             background-size: cover;
             background-position: center;
             padding: 8rem 0;
