@@ -21,48 +21,36 @@ public class UserUpdateServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // Fetching the logged-in user details from the session
-        Integer userId = (Integer) req.getSession().getAttribute("userId"); // userId is an integer in the session
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        String role = req.getParameter("role");
 
-        // Checking if the user is logged in
-        if (userId == null) {
-            resp.sendRedirect("index.jsp"); // Redirect to login page if not logged in
-            return;
-        }
+        // Retrieve data from the form
+        String username = req.getParameter("username").trim();
+        String password = req.getParameter("password").trim();
+        int userId = (int) req.getSession().getAttribute("userId"); // Get userId from session
 
-        try {
-            // Load MySQL JDBC driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
+        // SQL query for updating the user information (without role)
+        String sql = "UPDATE user SET userName = ?, password = ? WHERE userId = ?";
 
-            // Establish connection to the database
-            Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+             PreparedStatement pst = connection.prepareStatement(sql)) {
 
-            // SQL query to update user profile
-            String sql = "UPDATE user SET userName = ?, password = ?, role = ? WHERE userId = ?";
-            PreparedStatement pst = connection.prepareStatement(sql);
-
-            // Set the parameters for the prepared statement
+            // Set the parameters for the update query
             pst.setString(1, username);
-            pst.setString(2, password);  // Make sure password is hashed before saving
-            pst.setString(3, role);
-            pst.setInt(4, userId);  // Use setInt for integer userId
+            pst.setString(2, password); // You may want to hash the password before saving
+            pst.setInt(3, userId);
 
             // Execute the update query
-            int updatedRowCount = pst.executeUpdate();
+            int updatedRows = pst.executeUpdate();
 
-            // Redirect based on update result
-            if (updatedRowCount > 0) {
-                resp.sendRedirect("user-update.jsp?success=true"); // Profile updated successfully
+            // If update is successful, redirect to success page
+            if (updatedRows > 0) {
+                resp.sendRedirect("profile.jsp?success=true");
             } else {
-                resp.sendRedirect("user-update.jsp?error=true"); // Profile update failed
+                resp.sendRedirect("profile.jsp?success=true");
             }
-
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-            resp.sendRedirect("user-update.jsp?error=true"); // Handle exception and redirect with error
+            resp.sendRedirect("profile.jsp?error=true");
         }
     }
+
 }
