@@ -43,11 +43,19 @@
 
                 <!-- Submit Button -->
                 <button type="submit" class="btn btn-primary w-100">Login></button>
+
+
             </form>
 
             <!-- Additional Links -->
             <div class="text-center mt-3">
                 <a href="#" class="text-decoration-none">Forgot Password?</a>
+            </div>
+
+            <!-- Sign Up Section with Button -->
+            <div class="text-center mt-4">
+                <p>Don't have an account?</p>
+                <a href="signUp.jsp" class="btn btn-outline-primary">Sign Up</a>
             </div>
         </div>
     </div>

@@ -47,7 +47,7 @@ public class SignUpSaveServlet extends HttpServlet {
                             String formattedUserId = "U" + String.format("%03d", generatedUserId); // Format it as 'U001', 'U002', etc.
 
                             // Redirect to the success page with the formatted userId
-                            resp.sendRedirect("signUp.jsp?message=Signup Successful&userId=" + formattedUserId);
+                            resp.sendRedirect("index.jsp?message=Signup Successful&userId=" + formattedUserId);
                         }
                     } else {
                         resp.sendRedirect("signUp.jsp?error=Signup Failed");
