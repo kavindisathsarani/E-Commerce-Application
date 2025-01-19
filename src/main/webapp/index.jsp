@@ -80,7 +80,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary w-100">Login></button>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
 
 
             </form>

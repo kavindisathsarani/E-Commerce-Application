@@ -165,8 +165,8 @@
         <div class="logo">
             <i class="bi bi-shop"></i>
         </div>
-        <h1>Welcome Back</h1>
-        <p>Please sign in to continue</p>
+        <h1>Welcome</h1>
+        <p>Please sign up to continue</p>
     </div>
 
     <form action="signup-save" method="POST" id="loginForm">
