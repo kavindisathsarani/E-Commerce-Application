@@ -181,16 +181,13 @@
                         <i class="bi bi-speedometer2 me-1"></i>Dashboard
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="profile.jsp">
-                        <i class="bi bi-person me-1"></i>profile
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="index.jsp">
                         <i class="bi bi-person me-1"></i>Logout
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>
@@ -198,8 +195,7 @@
 
 <!-- Hero Section -->
 <section class="hero text-center">
-    <a href="customer-save.jsp">Add New Customer</a><br/>
-    <a href="signUp.jsp">sign up</a><br/>
+<a href="profile.jsp">profile</a>
     <div class="container">
         <h1>Discover Amazing Products</h1>
         <p>Explore our curated collection of premium products and enjoy a seamless shopping experience with exclusive deals and offers.</p>
@@ -209,6 +205,8 @@
         </a>
     </div>
 </section>
+
+
 
 <!-- Featured Categories -->
 <section class="container mb-5">
