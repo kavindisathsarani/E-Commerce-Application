@@ -15,7 +15,7 @@ import java.sql.PreparedStatement;
 @WebServlet(name = "addCategory", value = "/addCategory")
 
 public class categorySaveServlet extends HttpServlet {
-
+//
     private static final String DB_URL = "jdbc:mysql://localhost:3306/ecommerce_jsp";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "Ijse@123";
