@@ -169,7 +169,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="dashboardCustomer.jsp">
+                    <a class="nav-link" href="dashboardAdmin.jsp">
                         <i class="bi bi-speedometer2 me-1"></i>Dashboard
                     </a>
                 </li>
