@@ -20,27 +20,61 @@ public class productDeleteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String productId = request.getParameter("id");
+        System.out.println("Product ID to delete: " + productId); // Debugging log
 
         if (productId == null || productId.isEmpty()) {
-            response.sendRedirect("productManagement.jsp?status=failure");
+            System.err.println("Error: Product ID is null or empty.");
+            response.sendRedirect("product.jsp?status=failure");
             return;
         }
 
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
-            String deleteQuery = "DELETE FROM Products WHERE productId = ?";
-            try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
-                preparedStatement.setInt(1, Integer.parseInt(productId));
-                int rowsDeleted = preparedStatement.executeUpdate();
+            connection.setAutoCommit(false); // Start transaction
 
-                if (rowsDeleted > 0) {
-                    response.sendRedirect("product.jsp?status=success");
+            // Delete product
+            String deleteQuery = "DELETE FROM Products WHERE productId = ?";
+            try (PreparedStatement deleteStmt = connection.prepareStatement(deleteQuery)) {
+                deleteStmt.setInt(1, Integer.parseInt(productId));
+                int rowsDeleted = deleteStmt.executeUpdate();
+                if (rowsDeleted == 0) {
+                    System.err.println("Error: No rows deleted.");
+                    connection.rollback();
+                    response.sendRedirect("product.jsp?status=failure");
                     return;
                 }
             }
+
+            // Reassign product IDs
+            String updateQuery = "UPDATE Products SET productId = productId - 1 WHERE productId > ?";
+            try (PreparedStatement updateStmt = connection.prepareStatement(updateQuery)) {
+                updateStmt.setInt(1, Integer.parseInt(productId));
+                updateStmt.executeUpdate();
+            }
+
+            // Reset AUTO_INCREMENT
+            String resetAutoIncrementQuery = "ALTER TABLE Products AUTO_INCREMENT = ?";
+            try (PreparedStatement resetStmt = connection.prepareStatement(resetAutoIncrementQuery)) {
+                resetStmt.setInt(1, getMaxProductId(connection) + 1);
+                resetStmt.executeUpdate();
+            }
+
+            connection.commit(); // Commit transaction
+            System.out.println("Product deleted successfully and IDs updated.");
+            response.sendRedirect("product.jsp?status=success");
         } catch (Exception e) {
             e.printStackTrace();
+            response.sendRedirect("product.jsp?status=failure");
         }
+    }
 
-        response.sendRedirect("product.jsp?status=failure");
+    private int getMaxProductId(Connection connection) throws Exception {
+        String query = "SELECT MAX(productId) AS maxId FROM Products";
+        try (PreparedStatement stmt = connection.prepareStatement(query);
+             var rs = stmt.executeQuery()) {
+            if (rs.next()) {
+                return rs.getInt("maxId");
+            }
+        }
+        return 0; // No products in the table
     }
 }
