@@ -32,7 +32,7 @@ public class categoryDeleteServlet extends HttpServlet {
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
             connection.setAutoCommit(false); // Start transaction
 
-            // Delete category
+
             String deleteQuery = "DELETE FROM Categories WHERE categoryId = ?";
             try (PreparedStatement deleteStmt = connection.prepareStatement(deleteQuery)) {
                 deleteStmt.setInt(1, Integer.parseInt(categoryId));
