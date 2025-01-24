@@ -80,7 +80,10 @@
                     <td><%= rs.getString("categoryName") %></td>
                     <td>
                         <a href="editCategory?id=<%= rs.getInt("categoryId") %>" class="btn btn-warning btn-sm">Edit</a>
-                        <a href="deleteCategory?id=<%= rs.getInt("categoryId") %>" class="btn btn-danger btn-sm">Delete</a>
+                        <!-- Confirmation before delete -->
+                        <a href="deleteCategory?id=<%= rs.getInt("categoryId") %>"
+                           class="btn btn-danger btn-sm"
+                           onclick="return confirmDelete()">Delete</a>
                     </td>
                 </tr>
                 <%
@@ -95,6 +98,11 @@
         </div>
     </div>
 </div>
+<script>
+    function confirmDelete() {
+        return confirm("Are you sure you want to delete this category?");
+    }
+</script>
 
 <!-- Bootstrap Bundle JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
