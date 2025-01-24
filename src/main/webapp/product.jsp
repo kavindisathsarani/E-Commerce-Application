@@ -330,7 +330,9 @@
                 <td><%= rs.getInt("categoryId") %></td>  <!-- Adjusted column name -->
                 <td>
                     <a href="editProduct?id=<%= rs.getInt("productId") %>" class="btn btn-warning btn-sm">Edit</a>
-                    <a href="deleteProduct?id=<%= rs.getInt("productId") %>" class="btn btn-danger btn-sm">Delete</a>
+                    <a href="deleteProduct?id=<%= rs.getInt("productId") %>"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirmDelete()">Delete</a>
                 </td>
             </tr>
             <%
@@ -364,6 +366,11 @@
             document.getElementById('productModal').style.display = 'none';
         }
     });
+
+    // Confirmation for product deletion
+    function confirmDelete() {
+        return confirm("Are you sure you want to delete this product?");
+    }
 </script>
 </body>
 </html>
