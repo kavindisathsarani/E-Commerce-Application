@@ -15,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .product-card {
-            border: 1px solid #ddd;
+            border: 1px solid #2563EBFF;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
@@ -34,23 +34,44 @@
             font-size: 1.1rem;
             font-weight: bold;
         }
+        .add-to-cart-btn,
+        .buy-now-btn {
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
         .add-to-cart-btn {
             background-color: #e91e63;
             color: white;
             border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
         }
         .add-to-cart-btn:hover {
             background-color: #d81b60;
+        }
+        .buy-now-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+        }
+        .buy-now-btn:hover {
+            background-color: #388e3c;
+        }
+        .navbar {
+            background-color: #2563EBFF;
+        }
+        .navbar .navbar-brand,
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #80a4f3 !important;
         }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">E-Commerce</a>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -62,6 +83,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="logout.jsp">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="placeOrder.jsp">Place Order</a>
             </li>
         </ul>
     </div>
@@ -89,6 +113,7 @@
                     <p class="product-price">$100.00</p>
                     <p>Stock: 30</p>
                     <button class="add-to-cart-btn" onclick="addToCart(1)">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNow(1)">Buy Now</button>
                 </div>
             </div>
         </div>
@@ -102,32 +127,35 @@
                     <p class="product-price">$300.00</p>
                     <p>Stock: 40</p>
                     <button class="add-to-cart-btn" onclick="addToCart(2)">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNow(2)">Buy Now</button>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+                <img src="images/html-book.jpg" alt="Product Image" class="card-img-top">
                 <div class="product-info">
                     <h5 class="product-title">HTML</h5>
                     <p class="product-description">Comprehensive ICT book about HTML basics.</p>
                     <p class="product-price">$700.00</p>
                     <p>Stock: 50</p>
                     <button class="add-to-cart-btn" onclick="addToCart(3)">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNow(3)">Buy Now</button>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+                <img src="images/sun-dress.jpg" alt="Product Image" class="card-img-top">
                 <div class="product-info">
                     <h5 class="product-title">Sun Dress</h5>
                     <p class="product-description">Elegant summer frock for sunny days.</p>
                     <p class="product-price">$2000.00</p>
                     <p>Stock: 50</p>
                     <button class="add-to-cart-btn" onclick="addToCart(4)">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNow(4)">Buy Now</button>
                 </div>
             </div>
         </div>
@@ -145,6 +173,11 @@
         alert("Product " + productId + " added to cart!");
         // You can implement an AJAX call here to add the product to the cart in the back-end.
     }
+
+   /* function buyNow(productId) {
+        alert("Product " + productId + " purchased directly!");
+        // Implement direct purchase functionality (e.g., redirect to a checkout page).
+    }*/
 </script>
 
 </body>
