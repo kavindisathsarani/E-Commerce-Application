@@ -166,7 +166,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="product-list.jsp">
+                    <a class="nav-link" href="customer-product-browsing.jsp">
                         <i class="bi bi-grid me-1"></i>Products
                     </a>
                 </li>
