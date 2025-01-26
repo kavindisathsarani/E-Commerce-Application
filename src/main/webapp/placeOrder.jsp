@@ -36,11 +36,7 @@
                     <p class="fw-bold">Price: $<span id="productPrice">700.00</span></p>
                     <p>Stock Quantity: <span id="productStock">50</span></p>
 
-                    <!-- Quantity Input -->
-                    <div class="d-flex align-items-center">
-                        <label for="quantity" class="me-2">Quantity:</label>
-                        <input type="number" id="quantity" name="quantity" min="1" value="1" class="form-control me-2" style="width: 80px;" required>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -77,10 +73,10 @@
             </div>
 
             <!-- Place Order Form -->
-            <form action="placeOrder" method="post">
+            <form id="orderForm" action="placeOrder" method="post">
                 <input type="hidden" name="userId" value="1"> <!-- Example, you should dynamically populate this -->
                 <input type="hidden" name="totalAmount" id="totalAmountInput" value="700.00">
-                <button type="submit" class="btn btn-primary mt-3">Place Order</button>
+                <button type="submit" class="btn btn-primary mt-3" id="placeOrderButton">Place Order</button>
             </form>
         </div>
     </div>
@@ -90,7 +86,24 @@
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- JavaScript to Update Order Summary Total -->
+<!-- JavaScript to Show Success Message After Clicking Place Order -->
+<script>
+    const placeOrderButton = document.getElementById('placeOrderButton');
+    const orderForm = document.getElementById('orderForm');
 
+    // Handle "Place Order" button click
+    orderForm.addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent form submission for now
+
+        // Show a simple success message
+        alert('Order placed successfully!');
+
+        // Optionally, you can disable the button to prevent multiple clicks
+        placeOrderButton.disabled = true;
+
+        // You can also submit the form here if you are ready to process the order (e.g., via AJAX or traditional form submission)
+        // orderForm.submit(); // Uncomment this line to submit the form after showing the message
+    });
+</script>
 </body>
 </html>
