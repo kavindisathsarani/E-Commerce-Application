@@ -60,7 +60,7 @@
 
             <!-- Additional Links -->
             <div class="text-center mt-3">
-                <a href="profile.jsp" class="text-decoration-none">Back to Profile</a>
+                <a href="profile.jsp" class="text-decoration-none">Back to Dashboard</a>
             </div>
         </div>
     </div>
