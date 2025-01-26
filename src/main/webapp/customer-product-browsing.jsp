@@ -66,6 +66,11 @@
         .navbar-nav .nav-link:hover {
             color: #80a4f3 !important;
         }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -112,8 +117,13 @@
                     <p class="product-description">Fictional story book with a mysterious plot.</p>
                     <p class="product-price">$100.00</p>
                     <p>Stock: 30</p>
-                    <button class="add-to-cart-btn" onclick="addToCart(1)">Add to Cart</button>
-                    <button class="buy-now-btn" onclick="buyNow(1)">Buy Now</button>
+                    <div class="button-container">
+                        <form action="cart.jsp" method="post">
+                            <input type="hidden" name="productId" value="1">
+                            <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                        </form>
+                        <button class="buy-now-btn" onclick="buyNow(1)">Buy Now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,8 +136,13 @@
                     <p class="product-description">A teenage novel with thrilling adventures.</p>
                     <p class="product-price">$300.00</p>
                     <p>Stock: 40</p>
-                    <button class="add-to-cart-btn" onclick="addToCart(2)">Add to Cart</button>
-                    <button class="buy-now-btn" onclick="buyNow(2)">Buy Now</button>
+                    <div class="button-container">
+                        <form action="cart.jsp" method="post">
+                            <input type="hidden" name="productId" value="2">
+                            <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                        </form>
+                        <button class="buy-now-btn" onclick="buyNow(2)">Buy Now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,8 +155,13 @@
                     <p class="product-description">Comprehensive ICT book about HTML basics.</p>
                     <p class="product-price">$700.00</p>
                     <p>Stock: 50</p>
-                    <button class="add-to-cart-btn" onclick="addToCart(3)">Add to Cart</button>
-                    <button class="buy-now-btn" onclick="buyNow(3)">Buy Now</button>
+                    <div class="button-container">
+                        <form action="cart.jsp" method="post">
+                            <input type="hidden" name="productId" value="3">
+                            <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                        </form>
+                        <button class="buy-now-btn" onclick="buyNow(3)">Buy Now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,8 +174,13 @@
                     <p class="product-description">Elegant summer frock for sunny days.</p>
                     <p class="product-price">$2000.00</p>
                     <p>Stock: 50</p>
-                    <button class="add-to-cart-btn" onclick="addToCart(4)">Add to Cart</button>
-                    <button class="buy-now-btn" onclick="buyNow(4)">Buy Now</button>
+                    <div class="button-container">
+                        <form action="cart.jsp" method="post">
+                            <input type="hidden" name="productId" value="4">
+                            <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                        </form>
+                        <button class="buy-now-btn" onclick="buyNow(4)">Buy Now</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,15 +194,9 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    function addToCart(productId) {
-        alert("Product " + productId + " added to cart!");
-        // You can implement an AJAX call here to add the product to the cart in the back-end.
+    function buyNow(productId) {
+        window.location.href = `buy.jsp?productId=${productId}`;
     }
-
-   /* function buyNow(productId) {
-        alert("Product " + productId + " purchased directly!");
-        // Implement direct purchase functionality (e.g., redirect to a checkout page).
-    }*/
 </script>
 
 </body>
