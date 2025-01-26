@@ -170,10 +170,10 @@
     </div>
 
     <form action="signup-save" method="POST" id="loginForm">
-        <div class="form-floating">
+       <%-- <div class="form-floating">
             <input type="text" class="form-control" id="userid" name="userid" placeholder="User ID" required>
             <label for="userid">User ID</label>
-        </div>
+        </div>--%>
 
         <div class="form-floating">
             <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>

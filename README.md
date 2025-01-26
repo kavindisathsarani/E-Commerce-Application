@@ -12,8 +12,7 @@ This is a fully functional e-commerce web application developed using **JavaEE**
     - Add, view, update, and delete product categories.
 3. **Order Management**
     - View all orders placed by customers.
-4. **User Management**
-    - View, activate, or deactivate customer accounts.
+
 
 ### Customer Features
 1. **User Authentication**
@@ -81,17 +80,23 @@ src/
 
 ## Screenshots
 
-### Home Page
-![Home1.png](src/main/webapp/images/login-new.png)
+### Sign Up Page
+![Home1.png](src/main/webapp/images/signup.png)
 
-### Product List
+### Login Page
+![Login.png](src/main/webapp/images/login-pic.png)
 
-
-### Shopping Cart
-
+### Customer Dashboard
+![customer.png](src/main/webapp/images/cus-dashboard.png)
 
 ### Admin Dashboard
+![admin.png](src/main/webapp/images/admin-dash.png)
 
+### Product Browsing
+![browse.png](src/main/webapp/images/browse.png)
+
+### Add To Cart
+![admin.png](src/main/webapp/images/cart.png)
 
 ## Video Demonstration
 Watch the video demonstration of the application here: [YouTube Link](https://www.youtube.com/watch?v=your_video_link)
@@ -99,13 +104,7 @@ Watch the video demonstration of the application here: [YouTube Link](https://ww
 ## Bonus Features
 - Advanced search with filters by price range, category, and keywords.
 - User roles and permissions (e.g., admin, customer).
-- AJAX integration for cart updates and product search.
 
-## Evaluation Criteria
-- **Application functionality**
-- **Code quality**
-- **Efficient use of JDBC connection pooling**
-- **User interface and design**
 
 ## Author
 Developed by **Kavindi Sathsarani**.
