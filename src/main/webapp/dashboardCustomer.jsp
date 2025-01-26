@@ -170,11 +170,6 @@
                         <i class="bi bi-grid me-1"></i>Products
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.jsp">
-                        <i class="bi bi-cart me-1"></i>Cart
-                    </a>
-                </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="dashboardCustomer.jsp">
@@ -204,7 +199,7 @@
     <div class="container">
         <h1>Discover Amazing Products</h1>
         <p>Explore our curated collection of premium products and enjoy a seamless shopping experience with exclusive deals and offers.</p>
-        <a href="product-list.jsp" class="btn btn-primary btn-lg">
+        <a href="customer-product-browsing.jsp" class="btn btn-primary btn-lg">
             Start Shopping
             <i class="bi bi-arrow-right ms-2"></i>
         </a>

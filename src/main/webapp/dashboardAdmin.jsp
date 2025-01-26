@@ -162,11 +162,7 @@
                         <i class="bi bi-cart me-1"></i>Category
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.jsp">
-                        <i class="bi bi-cart me-1"></i>Cart
-                    </a>
-                </li>
+
 
                 <li class="nav-item">
                     <a class="nav-link" href="dashboardAdmin.jsp">
