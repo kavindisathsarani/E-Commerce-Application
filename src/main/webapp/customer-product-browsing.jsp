@@ -184,6 +184,26 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="product-card">
+                <img src="images/harry-potter.jpg" alt="Product Image" class="card-img-top">
+                <div class="product-info">
+                    <h5 class="product-title">Harry Potter</h5>
+                    <p class="product-description">The magic world</p>
+                    <p class="product-price">$700.00</p>
+                    <p>Stock: 50</p>
+                    <div class="button-container">
+                        <form action="cart.jsp" method="post">
+                            <input type="hidden" name="productId" value="3">
+                            <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                        </form>
+                        <button class="buy-now-btn" onclick="buyNow(5)">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -195,7 +215,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     function buyNow(productId) {
-        window.location.href = `buy.jsp?productId=${productId}`;
+        window.location.href = `placeOrder.jsp?productId=${productId}`;
     }
 </script>
 
