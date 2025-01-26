@@ -65,7 +65,7 @@ src/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kavindisathsarani/ecommerce-web-application.git
+   git clone https://github.com/kavindisathsarani/E-Commerce-Application.git
    ```
 
 2. Import the project into your preferred IDE (e.g., IntelliJ IDEA, Eclipse).
