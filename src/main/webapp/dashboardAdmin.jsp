@@ -162,6 +162,11 @@
                         <i class="bi bi-cart me-1"></i>Category
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="orders.jsp">
+                        <i class="bi bi-cart me-1"></i>Orders
+                    </a>
+                </li>
 
 
                 <li class="nav-item">
@@ -192,14 +197,14 @@
 
 <!-- Featured Categories -->
 <section class="container mb-5">
-    <h2 class="text-center mb-4 fw-bold">Featured Categories</h2>
+    <h2 class="text-center mb-4 fw-bold">Welcome to EasyBuy</h2>
     <div class="row">
         <div class="col-md-4">
             <div class="category-card card">
                 <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="Electronics">
                 <div class="card-body">
-                    <h5 class="card-title">Electronics</h5>
-                    <p class="card-text">Discover the latest gadgets and tech accessories.</p>
+                    <h5 class="card-title">Manage Products</h5>
+                    <p class="card-text">Discover the latest products and tech accessories.</p>
                 </div>
             </div>
         </div>
@@ -207,8 +212,8 @@
             <div class="category-card card">
                 <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="Fashion">
                 <div class="card-body">
-                    <h5 class="card-title">Fashion</h5>
-                    <p class="card-text">Trendy clothing and accessories for every style.</p>
+                    <h5 class="card-title">Manage Categories</h5>
+                    <p class="card-text">Trendy Categories for every style.</p>
                 </div>
             </div>
         </div>
@@ -216,7 +221,7 @@
             <div class="category-card card">
                 <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" class="card-img-top" alt="Home & Living">
                 <div class="card-body">
-                    <h5 class="card-title">Home & Living</h5>
+                    <h5 class="card-title">Manage Order</h5>
                     <p class="card-text">Beautiful decor and essentials for your home.</p>
                 </div>
             </div>
@@ -224,7 +229,7 @@
     </div>
 </section>
 
-<!-- Features Section -->
+<%--<!-- Features Section -->
 <section class="features">
     <div class="container">
         <div class="row text-center">
@@ -251,7 +256,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>--%>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

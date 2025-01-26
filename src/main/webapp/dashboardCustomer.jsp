@@ -197,6 +197,7 @@
 <section class="hero text-center">
 
     <div class="container">
+        <h1>Welcome to EasyBuy</h1>
         <h1>Discover Amazing Products</h1>
         <p>Explore our curated collection of premium products and enjoy a seamless shopping experience with exclusive deals and offers.</p>
         <a href="customer-product-browsing.jsp" class="btn btn-primary btn-lg">
