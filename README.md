@@ -95,14 +95,14 @@ src/
 ### Product Browsing
 ![browse.png](src/main/webapp/images/browse.png)
 
-### Product View
+### Add to Cart
 ![admin.png](src/main/webapp/images/cart.png)
 
-### Add To Cart
+### Product View
 ![admin.png](src/main/webapp/images/product-view.png)
 
 ## Video Demonstration
-Watch the video demonstration of the application here: [YouTube Link](https://www.youtube.com/watch?v=your_video_link)
+Watch the video demonstration of the application here: [YouTube Link](https://youtu.be/uczaOAsKdk4?si=3ATlOPjPkqFqOQMV)
 
 ## Bonus Features
 - Advanced search with filters by price range, category, and keywords.
